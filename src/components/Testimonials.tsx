@@ -9,7 +9,7 @@ const Testimonials = () => {
       property: "Riad - Médina",
       location: "Marrakech",
       rating: 5,
-      comment: "HOST Marrakech a transformé ma propriété en véritable source de revenus. Mes gains ont augmenté de 30% et je n'ai plus aucun souci de gestion. L'équipe est professionnelle et toujours disponible.",
+      comment: "NBL PRIME a transformé ma propriété en véritable source de revenus. Mes gains ont augmenté de 30% et je n'ai plus aucun souci de gestion. L'équipe est professionnelle et toujours disponible.",
       revenue: "+30%",
       period: "6 mois"
     },
@@ -36,7 +36,7 @@ const Testimonials = () => {
       property: "Riad traditionnel - Kasbah",
       location: "Marrakech",
       rating: 5,
-      comment: "Transparence totale, communication excellente et résultats au rendez-vous. HOST Marrakech a dépassé toutes mes attentes. Mon riad n'a jamais été aussi rentable.",
+      comment: "Transparence totale, communication excellente et résultats au rendez-vous. NBL PRIME a dépassé toutes mes attentes. Mon riad n'a jamais été aussi rentable.",
       revenue: "+28%",
       period: "10 mois"
     },
@@ -75,7 +75,7 @@ const Testimonials = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Découvrez comment HOST Marrakech a aidé des dizaines de propriétaires 
+            Découvrez comment NBL PRIME a aidé des dizaines de propriétaires 
             à maximiser leurs revenus locatifs en toute sérénité.
           </p>
         </div>

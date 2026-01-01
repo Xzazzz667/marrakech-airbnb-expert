@@ -26,7 +26,7 @@ const Navbar = () => {
                 <span className="text-primary-foreground font-bold text-lg">H</span>
               </div>
               <span className="text-xl font-bold text-foreground">
-                HOST Marrakech
+                NBL PRIME
               </span>
             </Link>
           </div>

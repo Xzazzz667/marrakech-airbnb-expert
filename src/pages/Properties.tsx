@@ -212,7 +212,7 @@ const Properties = () => {
               </h3>
               <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
                 Rejoignez notre portfolio de propriétés d'exception et maximisez 
-                vos revenus locatifs avec HOST Marrakech.
+                vos revenus locatifs avec NBL PRIME.
               </p>
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary font-semibold">
                 Demander une estimation gratuite
