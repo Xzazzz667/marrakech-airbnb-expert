@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Pourquoi choisir{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              HOST Marrakech
+              NBL PRIME
             </span>
             ?
           </h2>
