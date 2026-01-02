@@ -1,10 +1,24 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn, LogOut, User } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/");
+  };
 
   const navigation = [
     { name: "Accueil", href: "/" },
@@ -46,11 +60,29 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="hero" size="lg">
-              Estimation gratuite
-            </Button>
+          {/* Auth Buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <User className="h-4 w-4" />
+                    Mon compte
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem onClick={handleSignOut} className="cursor-pointer">
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Se déconnecter
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Button variant="hero" size="sm" onClick={() => navigate("/auth")} className="gap-2">
+                <LogIn className="h-4 w-4" />
+                Connexion
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -81,9 +113,17 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-2">
-              <Button variant="hero" size="lg" className="w-full">
-                Estimation gratuite
-              </Button>
+              {user ? (
+                <Button variant="outline" className="w-full gap-2" onClick={handleSignOut}>
+                  <LogOut className="h-4 w-4" />
+                  Se déconnecter
+                </Button>
+              ) : (
+                <Button variant="hero" className="w-full gap-2" onClick={() => { navigate("/auth"); setIsOpen(false); }}>
+                  <LogIn className="h-4 w-4" />
+                  Connexion
+                </Button>
+              )}
             </div>
           </div>
         </div>
