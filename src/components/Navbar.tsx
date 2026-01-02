@@ -25,6 +25,7 @@ const Navbar = () => {
     { name: "Services", href: "#services" },
     { name: "Pourquoi nous", href: "#avantages" },
     { name: "Témoignages", href: "#temoignages" },
+    { name: "Découvrir Marrakech", href: "/discover" },
     { name: "Nos biens", href: "/properties" },
     { name: "Contact", href: "#contact" },
   ];
