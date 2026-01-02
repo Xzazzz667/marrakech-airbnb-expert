@@ -24,11 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/discover" element={<DiscoverMarrakech />} />
-            <Route path="/properties" element={
-              <ProtectedRoute>
-                <Properties />
-              </ProtectedRoute>
-            } />
+            <Route path="/properties" element={<Properties />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
